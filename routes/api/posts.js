@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const auth = require("../../middleware/auth");
@@ -19,4 +19,4 @@ router.post("/", [ auth, [
   }
 };
 
-module.exports = router;
+module.exports = router;*/
