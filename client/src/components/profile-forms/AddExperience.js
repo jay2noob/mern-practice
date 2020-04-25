@@ -25,19 +25,15 @@ const AddExperience = ({ addExperience, history }) => {
   return (
     <Fragment>
       <h1 className="large text-primary">Add An Experience</h1>
-
       <p className="lead">
         <i className="fas fa-code-branch" /> Add any developer/programming
         positions that you have had in the past
       </p>
-
       <small>* = required field</small>
-
       <form
         className="form"
         onSubmit={(e) => {
           e.preventDefault();
-
           addExperience(formData, history);
         }}
       >
@@ -51,7 +47,6 @@ const AddExperience = ({ addExperience, history }) => {
             required
           />
         </div>
-
         <div className="form-group">
           <input
             type="text"
@@ -62,7 +57,6 @@ const AddExperience = ({ addExperience, history }) => {
             required
           />
         </div>
-
         <div className="form-group">
           <input
             type="text"
@@ -72,10 +66,8 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-
         <div className="form-group">
           <h4>From Date</h4>
-
           <input
             type="date"
             name="from"
@@ -83,7 +75,6 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-
         <div className="form-group">
           <p>
             <input
@@ -93,17 +84,14 @@ const AddExperience = ({ addExperience, history }) => {
               value={current}
               onChange={(e) => {
                 setFormData({ ...formData, current: !current });
-
                 toggleDisabled(!toDateDisabled);
               }}
             />{" "}
             Current Job
           </p>
         </div>
-
         <div className="form-group">
           <h4>To Date</h4>
-
           <input
             type="date"
             name="to"
@@ -112,7 +100,6 @@ const AddExperience = ({ addExperience, history }) => {
             disabled={toDateDisabled ? "disabled" : ""}
           />
         </div>
-
         <div className="form-group">
           <textarea
             name="description"
@@ -123,9 +110,7 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-
         <input type="submit" className="btn btn-primary my-1" />
-
         <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
@@ -138,8 +123,4 @@ AddExperience.propTypes = {
   addExperience: PropTypes.func.isRequired,
 };
 
-export default connect(
-  null,
-
-  { addExperience }
-)(withRouter(AddExperience));
+export default connect(null, { addExperience })(withRouter(AddExperience));
