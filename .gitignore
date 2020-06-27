@@ -105,8 +105,4 @@ dist
 
 # default.json
 config/default.json
-<<<<<<< HEAD
-config/production.jsom
-=======
 config/production.json
->>>>>>> fb0dea1f7aa89ae7c621b697fe7161cbe723a657
